@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import * as path from 'node:path';
 import process from 'node:process';
 import {
@@ -144,6 +148,7 @@ export interface ConfigParameters {
   listExtensions?: boolean;
   activeExtensions?: ActiveExtension[];
   noBrowser?: boolean;
+  fallbackModelPolicy?: 'ask' | 'never' | 'auto';
 }
 
 export class Config {
@@ -189,6 +194,7 @@ export class Config {
   private readonly _activeExtensions: ActiveExtension[];
   flashFallbackHandler?: FlashFallbackHandler;
   private quotaErrorOccurred: boolean = false;
+  private readonly fallbackModelPolicy: 'ask' | 'never' | 'auto';
 
   constructor(params: ConfigParameters) {
     this.sessionId = params.sessionId;
@@ -234,6 +240,7 @@ export class Config {
     this.listExtensions = params.listExtensions ?? false;
     this._activeExtensions = params.activeExtensions ?? [];
     this.noBrowser = params.noBrowser ?? false;
+    this.fallbackModelPolicy = params.fallbackModelPolicy ?? 'ask';
 
     if (params.contextFileName) {
       setGeminiMdFilename(params.contextFileName);
@@ -310,6 +317,10 @@ export class Config {
 
   setFlashFallbackHandler(handler: FlashFallbackHandler): void {
     this.flashFallbackHandler = handler;
+  }
+
+  getFallbackModelPolicy(): 'ask' | 'never' | 'auto' {
+    return this.fallbackModelPolicy;
   }
 
   getMaxSessionTurns(): number {

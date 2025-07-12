@@ -4,13 +4,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { getStartupWarnings } from './startupWarnings.js';
 import * as fs from 'fs/promises';
-import { getErrorMessage } from '@google/gemini-cli-core';
+import { getErrorMessage } from 'termai-cli-core';
 
 vi.mock('fs/promises');
-vi.mock('@google/gemini-cli-core', async (importOriginal) => {
+vi.mock('termai-cli-core', async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,

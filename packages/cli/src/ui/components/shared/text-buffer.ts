@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import stripAnsi from 'strip-ansi';
 import { spawnSync } from 'child_process';
 import fs from 'fs';
@@ -11,7 +15,7 @@ import os from 'os';
 import pathMod from 'path';
 import { useState, useCallback, useEffect, useMemo, useReducer } from 'react';
 import stringWidth from 'string-width';
-import { unescapePath } from '@google/gemini-cli-core';
+import { unescapePath } from 'termai-cli-core';
 import { toCodePoints, cpLen, cpSlice } from '../../utils/textUtils.js';
 
 export type Direction =

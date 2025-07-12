@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import {
   AuthType,
   UserTierId,
@@ -13,7 +17,7 @@ import {
   isGenericQuotaExceededError,
   isApiError,
   isStructuredError,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 
 // Free Tier message functions
 const getRateLimitErrorMessageGoogleFree = (

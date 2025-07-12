@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import {
   afterEach,
   beforeEach,
@@ -22,10 +26,10 @@ import {
   type EditorType,
   checkHasEditorType,
   allowEditorTypeInSandbox,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 
-vi.mock('@google/gemini-cli-core', async () => {
-  const actual = await vi.importActual('@google/gemini-cli-core');
+vi.mock('termai-cli-core', async () => {
+  const actual = await vi.importActual('termai-cli-core');
   return {
     ...actual,
     checkHasEditorType: vi.fn(() => true),

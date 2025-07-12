@@ -1,3 +1,20 @@
+# ⚠️  NOTICE: This file is preserved from the original Google gemini-cli project
+# but WILL NOT WORK in this fork (TermAI CLI) because it contains Google-specific
+# infrastructure resources that are not accessible outside of Google's environment.
+#
+# This file contains references to:
+# - us-west1-docker.pkg.dev/gemini-code-dev/* (Google's private Docker registry)
+# - Google Cloud Build specific configurations
+# - Google's internal CI/CD pipeline
+#
+# To deploy this fork, you would need to:
+# 1. Set up your own Docker registry (e.g., Docker Hub, GitHub Container Registry)
+# 2. Create your own CI/CD pipeline (e.g., GitHub Actions)
+# 3. Replace all Google-specific resource references
+#
+# This file is kept for reference purposes only.
+# --------------------------------------------------------------------------
+
 steps:
   # Step 1: Install root dependencies (includes workspaces)
   - name: 'us-west1-docker.pkg.dev/gemini-code-dev/gemini-code-containers/gemini-code-builder'

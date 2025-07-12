@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { AuthType } from '@google/gemini-cli-core';
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
+import { AuthType } from 'termai-cli-core';
 import { vi } from 'vitest';
 import { validateAuthMethod } from './auth.js';
 

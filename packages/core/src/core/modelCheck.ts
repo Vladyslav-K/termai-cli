@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import {
   DEFAULT_GEMINI_MODEL,
   DEFAULT_GEMINI_FLASH_MODEL,
@@ -40,7 +44,7 @@ export async function getEffectiveModel(
   });
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 2000); // 500ms timeout for the request
+  const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout for the request
 
   try {
     const response = await fetch(endpoint, {

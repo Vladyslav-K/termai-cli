@@ -4,8 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { Message, MessageType } from '../types.js';
-import { Config } from '@google/gemini-cli-core';
+import { Config } from 'termai-cli-core';
 import { LoadedSettings } from '../../config/settings.js';
 
 export function createShowMemoryAction(

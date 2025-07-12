@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { PartListUnion, PartUnion } from '@google/genai';
@@ -12,7 +16,7 @@ import {
   getErrorMessage,
   isNodeError,
   unescapePath,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 import {
   HistoryItem,
   IndividualToolCallDisplay,

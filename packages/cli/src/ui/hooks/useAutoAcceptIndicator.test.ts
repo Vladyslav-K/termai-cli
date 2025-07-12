@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import {
   describe,
   it,
@@ -20,14 +24,14 @@ import {
   Config,
   Config as ActualConfigType,
   ApprovalMode,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 import { useInput, type Key as InkKey } from 'ink';
 
 vi.mock('ink');
 
-vi.mock('@google/gemini-cli-core', async () => {
+vi.mock('termai-cli-core', async () => {
   const actualServerModule = (await vi.importActual(
-    '@google/gemini-cli-core',
+    'termai-cli-core',
   )) as Record<string, unknown>;
   return {
     ...actualServerModule,

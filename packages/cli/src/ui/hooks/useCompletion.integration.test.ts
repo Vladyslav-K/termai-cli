@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
 import type { Mocked } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
@@ -11,7 +15,7 @@ import { useCompletion } from './useCompletion.js';
 import * as fs from 'fs/promises';
 import { glob } from 'glob';
 import { CommandContext, SlashCommand } from '../commands/types.js';
-import { Config, FileDiscoveryService } from '@google/gemini-cli-core';
+import { Config, FileDiscoveryService } from 'termai-cli-core';
 
 interface MockConfig {
   getFileFilteringRespectGitIgnore: () => boolean;
@@ -21,8 +25,8 @@ interface MockConfig {
 
 // Mock dependencies
 vi.mock('fs/promises');
-vi.mock('@google/gemini-cli-core', async () => {
-  const actual = await vi.importActual('@google/gemini-cli-core');
+vi.mock('termai-cli-core', async () => {
+  const actual = await vi.importActual('termai-cli-core');
   return {
     ...actual,
     FileDiscoveryService: vi.fn(),

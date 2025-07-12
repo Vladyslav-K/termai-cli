@@ -1,17 +1,17 @@
-# Sandboxing in the Gemini CLI
+# Sandboxing in the TermAI CLI
 
-This document provides a guide to sandboxing in the Gemini CLI, including prerequisites, quickstart, and configuration.
+This document provides a guide to sandboxing in the TermAI CLI, including prerequisites, quickstart, and configuration.
 
 ## Prerequisites
 
-Before using sandboxing, you need to install and set up the Gemini CLI:
+Before using sandboxing, you need to install and set up the TermAI CLI:
 
 ```bash
 # install gemini-cli with npm
-npm install -g @google/gemini-cli
+npm install -g @vladyslav-k/termai-cli
 
 # Verify installation
-gemini --version
+termai --version
 ```
 
 ## Overview of sandboxing
@@ -45,11 +45,11 @@ Cross-platform sandboxing with complete process isolation.
 
 ```bash
 # Enable sandboxing with command flag
-gemini -s -p "analyze the code structure"
+termai -s -p "analyze the code structure"
 
 # Use environment variable
 export GEMINI_SANDBOX=true
-gemini -p "run the test suite"
+termai -p "run the test suite"
 
 # Configure in settings.json
 {
@@ -106,17 +106,17 @@ export SANDBOX_SET_UID_GID=false  # Disable UID/GID mapping
 ### Debug mode
 
 ```bash
-DEBUG=1 gemini -s -p "debug command"
+DEBUG=1 termai -s -p "debug command"
 ```
 
 ### Inspect sandbox
 
 ```bash
 # Check environment
-gemini -s -p "run shell command: env | grep SANDBOX"
+termai -s -p "run shell command: env | grep SANDBOX"
 
 # List mounts
-gemini -s -p "run shell command: mount | grep workspace"
+termai -s -p "run shell command: mount | grep workspace"
 ```
 
 ## Security notes

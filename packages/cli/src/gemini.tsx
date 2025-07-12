@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import React from 'react';
 import { render } from 'ink';
 import { AppWrapper } from './ui/App.js';
@@ -37,7 +41,7 @@ import {
   logUserPrompt,
   AuthType,
   getOauthClient,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 import { validateAuthMethod } from './config/auth.js';
 import { setMaxSizedBoxDebugging } from './ui/components/shared/MaxSizedBox.js';
 

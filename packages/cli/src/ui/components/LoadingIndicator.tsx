@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { ThoughtSummary } from '@google/gemini-cli-core';
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
+import { ThoughtSummary } from 'termai-cli-core';
 import React from 'react';
 import { Box, Text } from 'ink';
 import { Colors } from '../colors.js';
