@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import * as fs from 'fs';
 import * as path from 'path';
 import { homedir, platform } from 'os';
@@ -15,7 +19,7 @@ import {
   BugCommandSettings,
   TelemetrySettings,
   AuthType,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 import stripJsonComments from 'strip-json-comments';
 import { DefaultLight } from '../ui/themes/default-light.js';
 import { DefaultDark } from '../ui/themes/default.js';
@@ -82,6 +86,9 @@ export interface Settings {
 
   // Setting for setting maximum number of user/model/tool turns in a session.
   maxSessionTurns?: number;
+
+  // Fallback model settings
+  fallbackModelPolicy?: 'ask' | 'never' | 'auto';
 
   // Add other settings here.
 }

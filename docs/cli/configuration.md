@@ -1,6 +1,6 @@
-# Gemini CLI Configuration
+# TermAI CLI Configuration
 
-Gemini CLI offers several ways to configure its behavior, including environment variables, command-line arguments, and settings files. This document outlines the different configuration methods and available settings.
+TermAI CLI offers several ways to configure its behavior, including environment variables, command-line arguments, and settings files. This document outlines the different configuration methods and available settings.
 
 ## Configuration layers
 
@@ -15,7 +15,7 @@ Configuration is applied in the following order of precedence (lower numbers are
 
 ## Settings files
 
-Gemini CLI uses `settings.json` files for persistent configuration. There are three locations for these files:
+TermAI CLI uses `settings.json` files for persistent configuration. There are three locations for these files:
 
 - **User settings file:**
   - **Location:** `~/.gemini/settings.json` (where `~` is your home directory).
@@ -189,6 +189,18 @@ In addition to a project settings file, a project's `.gemini` directory can cont
     "hideTips": true
     ```
 
+- **`fallbackModelPolicy`** (string):
+  - **Description:** Determines how the CLI should respond when the primary "pro" model encounters a rate limit error (HTTP 429). To avoid disrupting your workflow, the CLI can temporarily transition to a more available fallback model (such as Flash) for the current session.
+  - **Default:** `"ask"`
+  - **Values:**
+    - `"ask"`: Prompts for your confirmation before switching to the fallback model. This is the default setting.
+    - `"never"`: Disables the fallback mechanism. Rate limit errors from the primary model will be displayed directly, and no attempt will be made to switch models.
+    - `"auto"`: Automatically switches to the fallback model without prompting. 
+  - **Example:**
+    ```json
+    "fallbackModelPolicy": "ask"
+    ```
+
 - **`maxSessionTurns`** (number):
   - **Description:** Sets the maximum number of turns for a session. If the session exceeds this limit, the CLI will stop processing and start a new chat.
   - **Default:** `-1` (unlimited)
@@ -222,6 +234,7 @@ In addition to a project settings file, a project's `.gemini` directory can cont
   },
   "usageStatisticsEnabled": true,
   "hideTips": false,
+  "fallbackModelPolicy": "ask",
   "maxSessionTurns": 10
 }
 ```

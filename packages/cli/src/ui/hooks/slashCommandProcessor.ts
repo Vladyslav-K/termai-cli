@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { useCallback, useMemo, useEffect, useState } from 'react';
 import { type PartListUnion } from '@google/genai';
 import open from 'open';
@@ -18,7 +22,7 @@ import {
   MCPServerStatus,
   getMCPDiscoveryState,
   getMCPServerStatus,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 import { useSessionStats } from '../contexts/SessionContext.js';
 import {
   Message,

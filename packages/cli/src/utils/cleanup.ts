@@ -4,9 +4,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { promises as fs } from 'fs';
 import { join } from 'path';
-import { getProjectTempDir } from '@google/gemini-cli-core';
+import { getProjectTempDir } from 'termai-cli-core';
 
 export async function cleanupCheckpoints() {
   const tempDir = getProjectTempDir(process.cwd());

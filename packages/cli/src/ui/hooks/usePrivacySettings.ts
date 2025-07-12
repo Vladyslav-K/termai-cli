@@ -4,9 +4,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { GaxiosError } from 'gaxios';
 import { useState, useEffect, useCallback } from 'react';
-import { Config, CodeAssistServer, UserTierId } from '@google/gemini-cli-core';
+import { Config, CodeAssistServer, UserTierId } from 'termai-cli-core';
 
 export interface PrivacyState {
   isLoading: boolean;

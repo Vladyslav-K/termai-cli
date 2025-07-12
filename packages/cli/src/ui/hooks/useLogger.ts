@@ -4,8 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { useState, useEffect } from 'react';
-import { sessionId, Logger } from '@google/gemini-cli-core';
+import { sessionId, Logger } from 'termai-cli-core';
 
 /**
  * Hook to manage the logger instance.

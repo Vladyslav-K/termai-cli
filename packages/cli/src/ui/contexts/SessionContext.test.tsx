@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { type MutableRefObject } from 'react';
 import { render } from 'ink-testing-library';
 import { renderHook } from '@testing-library/react';
@@ -14,7 +18,7 @@ import {
   SessionMetrics,
 } from './SessionContext.js';
 import { describe, it, expect, vi } from 'vitest';
-import { uiTelemetryService } from '@google/gemini-cli-core';
+import { uiTelemetryService } from 'termai-cli-core';
 
 /**
  * A test harness component that uses the hook and exposes the context value

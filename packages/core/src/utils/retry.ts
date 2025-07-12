@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { AuthType } from '../core/contentGenerator.js';
 import {
   isProQuotaExceededError,
@@ -23,9 +27,9 @@ export interface RetryOptions {
 }
 
 const DEFAULT_RETRY_OPTIONS: RetryOptions = {
-  maxAttempts: 5,
+  maxAttempts: 20, // 20 tries before giving up
   initialDelayMs: 5000,
-  maxDelayMs: 30000, // 30 seconds
+  maxDelayMs: 60000, // 60 seconds between retries
   shouldRetry: defaultShouldRetry,
 };
 
@@ -154,8 +158,9 @@ export async function retryWithBackoff<T>(
       }
 
       // If we have persistent 429s and a fallback callback for OAuth
+      // try 10 times before fallback
       if (
-        consecutive429Count >= 2 &&
+        consecutive429Count >= 10 &&
         onPersistent429 &&
         authType === AuthType.LOGIN_WITH_GOOGLE
       ) {

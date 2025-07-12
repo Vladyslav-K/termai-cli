@@ -4,10 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import React from 'react';
 import { Box, Text } from 'ink';
 import { Colors } from '../colors.js';
-import { ApprovalMode } from '@google/gemini-cli-core';
+import { ApprovalMode } from 'termai-cli-core';
 
 interface AutoAcceptIndicatorProps {
   approvalMode: ApprovalMode;

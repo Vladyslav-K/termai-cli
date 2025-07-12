@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { MCPServerConfig } from '@google/gemini-cli-core';
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
+import { MCPServerConfig } from 'termai-cli-core';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';

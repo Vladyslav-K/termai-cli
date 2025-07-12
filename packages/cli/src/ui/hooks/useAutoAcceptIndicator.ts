@@ -4,9 +4,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { useState, useEffect } from 'react';
 import { useInput } from 'ink';
-import { ApprovalMode, type Config } from '@google/gemini-cli-core';
+import { ApprovalMode, type Config } from 'termai-cli-core';
 
 export interface UseAutoAcceptIndicatorArgs {
   config: Config;

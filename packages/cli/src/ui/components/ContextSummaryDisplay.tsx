@@ -4,10 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import React from 'react';
 import { Text } from 'ink';
 import { Colors } from '../colors.js';
-import { type MCPServerConfig } from '@google/gemini-cli-core';
+import { type MCPServerConfig } from 'termai-cli-core';
 
 interface ContextSummaryDisplayProps {
   geminiMdFileCount: number;

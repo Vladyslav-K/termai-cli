@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Config, GitService, Logger } from '@google/gemini-cli-core';
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
+import { Config, GitService, Logger } from 'termai-cli-core';
 import { LoadedSettings } from '../../config/settings.js';
 import { UseHistoryManagerReturn } from '../hooks/useHistoryManager.js';
 import { SessionStatsState } from '../contexts/SessionContext.js';

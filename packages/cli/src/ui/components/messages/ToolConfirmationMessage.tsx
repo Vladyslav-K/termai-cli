@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import React from 'react';
 import { Box, Text, useInput } from 'ink';
 import { DiffRenderer } from './DiffRenderer.js';
@@ -14,7 +18,7 @@ import {
   ToolExecuteConfirmationDetails,
   ToolMcpConfirmationDetails,
   Config,
-} from '@google/gemini-cli-core';
+} from 'termai-cli-core';
 import {
   RadioButtonSelect,
   RadioSelectItem,

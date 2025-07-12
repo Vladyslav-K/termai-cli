@@ -4,10 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * Modifications Copyright 2025 Vladyslav K.
+ */
+
 import { useState, useEffect, useCallback } from 'react';
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { isNodeError, getProjectTempDir } from '@google/gemini-cli-core';
+import { isNodeError, getProjectTempDir } from 'termai-cli-core';
 
 const HISTORY_FILE = 'shell_history';
 const MAX_HISTORY_LENGTH = 100;
